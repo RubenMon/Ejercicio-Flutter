@@ -16,7 +16,7 @@ class Ejercicio1 extends StatelessWidget {
               style: GoogleFonts.aladin(
                 color: const Color.fromARGB(255, 250, 16, 66),
                 letterSpacing: 8.0,
-                fontSize: 40,
+                fontSize: 25,
               ),
             )));
   }

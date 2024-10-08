@@ -15,19 +15,19 @@ class Ejercicio2 extends StatelessWidget {
           children: [
             Image(
               image: AssetImage('asset/images/malaga2.jpg'),
-              width: 300,
+              width: 120,
               height: 300,
             ),
             SizedBox(width: 10), // Espacio entre las imágenes
             Image(
               image: AssetImage('asset/images/malaga3.jpg'),
-              width: 300,
+              width: 120,
               height: 300,
             ),
             SizedBox(width: 10), // Espacio entre las imágenes
             Image(
               image: AssetImage('asset/images/malaga4.jpg'),
-              width: 300,
+              width: 120,
               height: 300,
             ),
           ],

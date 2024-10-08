@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
           ),
           drawer: const MenuLateral(),
           body: const Center(
-            child: Text("Enlace"),
+            child: Text("https://github.com/RubenMon/Ejercicio-Flutter.git"),
           ),
         ));
   }
