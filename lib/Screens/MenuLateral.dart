@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Screens/Ejercicio3.dart';
 import 'package:flutter_application_1/Screens/Ejercicio4.dart';
+import 'package:flutter_application_1/Screens/Entrega3.dart';
 import 'Ejercicio1.dart';
 import 'Ejercicio2.dart';
 
@@ -51,12 +52,20 @@ class MenuLateral extends StatelessWidget {
                   builder: (BuildContext context) => const Ejercicio3()));
             },
           ),
-                    ListTile(
+          ListTile(
             title: const Text("Ejercicio 4"),
             onTap: () {
               Navigator.of(context).pop();
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (BuildContext context) => const Ejercicio4()));
+            },
+          ),
+          ListTile(
+            title: const Text("Entrega 3"),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => const Entrega3()));
             },
           ),
         ],
