@@ -1,13 +1,13 @@
 <libraries>
   <library
-      name="__local_aars__:C:\Users\ruben\Desktop\flutter_application_1\build\app\intermediates\flutter\release\libs.jar:unspecified@jar"
-      jars="C:\Users\ruben\Desktop\flutter_application_1\build\app\intermediates\flutter\release\libs.jar"
-      resolved="__local_aars__:C:\Users\ruben\Desktop\flutter_application_1\build\app\intermediates\flutter\release\libs.jar:unspecified"/>
+      name="__local_aars__:C:\Users\ruben\Documents\GitHub\Ejercicio-Flutter\build\app\intermediates\flutter\release\libs.jar:unspecified@jar"
+      jars="C:\Users\ruben\Documents\GitHub\Ejercicio-Flutter\build\app\intermediates\flutter\release\libs.jar"
+      resolved="__local_aars__:C:\Users\ruben\Documents\GitHub\Ejercicio-Flutter\build\app\intermediates\flutter\release\libs.jar:unspecified"/>
   <library
-      name="C:\Users\ruben\Desktop\flutter_application_1\android@@:path_provider_android::release"
-      jars="C:\Users\ruben\Desktop\flutter_application_1\build\path_provider_android\.transforms\7601aba5132dbe8203b6aaff791fb3f6\transformed\out\jars\classes.jar;C:\Users\ruben\Desktop\flutter_application_1\build\path_provider_android\.transforms\7601aba5132dbe8203b6aaff791fb3f6\transformed\out\jars\libs\R.jar"
+      name="C:\Users\ruben\Documents\GitHub\Ejercicio-Flutter\android@@:path_provider_android::release"
+      jars="C:\Users\ruben\Documents\GitHub\Ejercicio-Flutter\build\path_provider_android\.transforms\5b5a3a37a01a117be4567d7c97035b3a\transformed\out\jars\classes.jar;C:\Users\ruben\Documents\GitHub\Ejercicio-Flutter\build\path_provider_android\.transforms\5b5a3a37a01a117be4567d7c97035b3a\transformed\out\jars\libs\R.jar"
       resolved="io.flutter.plugins.pathprovider:path_provider_android:unspecified"
-      folder="C:\Users\ruben\Desktop\flutter_application_1\build\path_provider_android\.transforms\7601aba5132dbe8203b6aaff791fb3f6\transformed\out"
+      folder="C:\Users\ruben\Documents\GitHub\Ejercicio-Flutter\build\path_provider_android\.transforms\5b5a3a37a01a117be4567d7c97035b3a\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
