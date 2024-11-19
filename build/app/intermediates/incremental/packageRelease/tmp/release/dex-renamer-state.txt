@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 #Tue Nov 19 20:31:57 CET 2024
 base.0=C\:\\Users\\ruben\\Desktop\\Aplicaciones flutter\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
+=======
+#Mon Nov 11 13:34:04 CET 2024
+base.0=C\:\\Users\\ruben\\Documents\\GitHub\\Ejercicio-Flutter\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
+>>>>>>> 50301b26d50e7bf2c41f5c69f316bda7767fddaf
 path.0=classes.dex
 renamed.0=classes.dex

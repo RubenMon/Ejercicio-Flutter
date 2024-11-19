@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # The proguard configuration file for the following section is C:\Users\ruben\Desktop\Aplicaciones flutter\build\app\intermediates\default_proguard_files\global\proguard-android.txt-8.1.0
+=======
+# The proguard configuration file for the following section is C:\Users\ruben\Documents\GitHub\Ejercicio-Flutter\build\app\intermediates\default_proguard_files\global\proguard-android.txt-8.1.0
+>>>>>>> 50301b26d50e7bf2c41f5c69f316bda7767fddaf
 # This is a configuration file for ProGuard.
 # http://proguard.sourceforge.net/index.html#manual/usage.html
 #
@@ -116,7 +120,11 @@
 # These classes are duplicated between android.jar and core-lambda-stubs.jar.
 -dontnote java.lang.invoke.**
 
+<<<<<<< HEAD
 # End of content from C:\Users\ruben\Desktop\Aplicaciones flutter\build\app\intermediates\default_proguard_files\global\proguard-android.txt-8.1.0
+=======
+# End of content from C:\Users\ruben\Documents\GitHub\Ejercicio-Flutter\build\app\intermediates\default_proguard_files\global\proguard-android.txt-8.1.0
+>>>>>>> 50301b26d50e7bf2c41f5c69f316bda7767fddaf
 # The proguard configuration file for the following section is C:\flutter\packages\flutter_tools\gradle\flutter_proguard_rules.pro
 # Build the ephemeral app in a module project.
 # Prevents: Warning: library class <plugin-package> depends on program class io.flutter.plugin.**
@@ -127,14 +135,22 @@
 -dontwarn android.**
 
 # End of content from C:\flutter\packages\flutter_tools\gradle\flutter_proguard_rules.pro
+<<<<<<< HEAD
 # The proguard configuration file for the following section is C:\Users\ruben\Desktop\Aplicaciones flutter\build\app\intermediates\aapt_proguard_file\release\aapt_rules.txt
+=======
+# The proguard configuration file for the following section is C:\Users\ruben\Documents\GitHub\Ejercicio-Flutter\build\app\intermediates\aapt_proguard_file\release\aapt_rules.txt
+>>>>>>> 50301b26d50e7bf2c41f5c69f316bda7767fddaf
 -keep class android.app.Application { <init>(); }
 -keep class androidx.core.app.CoreComponentFactory { <init>(); }
 -keep class androidx.profileinstaller.ProfileInstallReceiver { <init>(); }
 -keep class androidx.startup.InitializationProvider { <init>(); }
 -keep class com.example.flutter_application_1.MainActivity { <init>(); }
 
+<<<<<<< HEAD
 # End of content from C:\Users\ruben\Desktop\Aplicaciones flutter\build\app\intermediates\aapt_proguard_file\release\aapt_rules.txt
+=======
+# End of content from C:\Users\ruben\Documents\GitHub\Ejercicio-Flutter\build\app\intermediates\aapt_proguard_file\release\aapt_rules.txt
+>>>>>>> 50301b26d50e7bf2c41f5c69f316bda7767fddaf
 # The proguard configuration file for the following section is C:\Users\ruben\.gradle\caches\transforms-3\a49cd171355a6a39687e69f028c8bcbc\transformed\fragment-1.7.1\proguard.txt
 # Copyright (C) 2020 The Android Open Source Project
 #

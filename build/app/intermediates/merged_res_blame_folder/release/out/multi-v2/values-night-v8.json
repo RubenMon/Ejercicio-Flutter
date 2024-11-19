@@ -4,7 +4,11 @@
             "outputFile": "com.example.flutter_application_1.app-mergeReleaseResources-24:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
+<<<<<<< HEAD
                     "source": "C:\\Users\\ruben\\Desktop\\Aplicaciones flutter\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+=======
+                    "source": "C:\\Users\\ruben\\Documents\\GitHub\\Ejercicio-Flutter\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+>>>>>>> 50301b26d50e7bf2c41f5c69f316bda7767fddaf
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
