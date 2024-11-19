@@ -1,4 +1,4 @@
-#Tue Oct 08 09:56:18 CEST 2024
-base.0=C\:\\Users\\ruben\\Desktop\\flutter_application_1\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
+#Tue Nov 19 20:31:57 CET 2024
+base.0=C\:\\Users\\ruben\\Desktop\\Aplicaciones flutter\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
