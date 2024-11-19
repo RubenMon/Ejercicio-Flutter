@@ -1,13 +1,4 @@
-<<<<<<< HEAD
 import 'package:flutter_application_1/rutas/rutas.dart';
-=======
-import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Screens/Ejercicio3.dart';
-import 'package:flutter_application_1/Screens/Ejercicio4.dart';
-import 'package:flutter_application_1/Screens/Entrega3.dart';
-import 'Ejercicio1.dart';
-import 'Ejercicio2.dart';
->>>>>>> 50301b26d50e7bf2c41f5c69f316bda7767fddaf
 
 class MenuLateral extends StatelessWidget {
   const MenuLateral({super.key});
@@ -72,7 +63,6 @@ class MenuLateral extends StatelessWidget {
                   builder: (BuildContext context) => const Entrega3()));
             },
           ),
-<<<<<<< HEAD
           ListTile(
             title: const Text("Instagram"),
             onTap: () {
@@ -81,8 +71,6 @@ class MenuLateral extends StatelessWidget {
                   builder: (BuildContext context) => const Instagram()));
             },
           ),
-=======
->>>>>>> 50301b26d50e7bf2c41f5c69f316bda7767fddaf
         ],
       ),
     );

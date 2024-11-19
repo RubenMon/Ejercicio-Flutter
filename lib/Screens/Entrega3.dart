@@ -11,39 +11,9 @@ class Entrega3 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-<<<<<<< HEAD
-    return MaterialApp(
-      title: 'Juego de la Imagen',
-      debugShowCheckedModeBanner: false, // Desactivar el banner de depuración
-      theme: ThemeData(
-        primarySwatch: Colors.blue, // Paleta de colores primaria
-        scaffoldBackgroundColor: Colors.lightBlue.shade50, // Fondo claro para el Scaffold
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.blueAccent, // Fondo de la AppBar
-          titleTextStyle: TextStyle(
-            color: Colors.white, // Color del texto en la AppBar
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        textTheme: const TextTheme(
-          bodyMedium: TextStyle(
-            fontSize: 16,
-            color: Colors.black87, // Texto general en negro
-          ),
-          titleLarge: TextStyle(
-            fontSize: 24,
-            fontWeight: FontWeight.bold,
-            color: Colors.black, // Títulos principales
-          ),
-        ),
-      ),
-      home: const Juego(),
-=======
     return const MaterialApp(
       title: 'Juego de la Imagen',
       home: Juego(),
->>>>>>> 50301b26d50e7bf2c41f5c69f316bda7767fddaf
     );
   }
 }
@@ -61,11 +31,7 @@ class juegosEstado extends State<Juego> {
   int puntos = 0;
   double posicionX = 0;
   double posicionY = 0;
-<<<<<<< HEAD
-  bool imagenPulsada = false;
-=======
   bool imagenPulsada = false; // Variable para controlar si se ha pulsado la imagen
->>>>>>> 50301b26d50e7bf2c41f5c69f316bda7767fddaf
 
   @override
   void initState() {
@@ -77,17 +43,6 @@ class juegosEstado extends State<Juego> {
     Timer.periodic(const Duration(seconds: 3), (timer) {
       setState(() {
         if (!imagenPulsada) {
-<<<<<<< HEAD
-          puntos -= 2;
-        }
-        double tamanioPantalla = MediaQuery.of(context).size.height / 2;
-        double coordenadaYAleatoria = Random().nextDouble() * (tamanioPantalla - 50) + 50;
-
-        posicionX = Random().nextDouble() * 0.9;
-        posicionY = coordenadaYAleatoria / MediaQuery.of(context).size.height;
-
-        imagenPulsada = false;
-=======
           // Resta puntos si no se ha pulsado la imagen
           puntos -= 2;
         }
@@ -99,25 +54,44 @@ class juegosEstado extends State<Juego> {
         posicionY = coordenadaYAleatoria / MediaQuery.of(context).size.height; // Posición Y aleatoria dentro de límites seguros
 
         imagenPulsada = false; // Reiniciar el estado de la pulsación
->>>>>>> 50301b26d50e7bf2c41f5c69f316bda7767fddaf
       });
     });
   }
 
   void pulsarImagen() {
     setState(() {
-<<<<<<< HEAD
-      if (!imagenPulsada) {
-        puntos += 1;
-        imagenPulsada = true;
-=======
       if (!imagenPulsada) { // Solo se obtiene un punto si no se ha pulsado antes
         // Sumar puntos al pulsar la imagen
         puntos += 1;
         imagenPulsada = true; // Marcar que la imagen ha sido pulsada
->>>>>>> 50301b26d50e7bf2c41f5c69f316bda7767fddaf
+      }
+
+      // Mostrar alerta si los puntos son 5
+      if (puntos == 5) {
+        _mostrarAlerta();
       }
     });
+  }
+
+  // Función para mostrar el dialog cuando se llega a 5 puntos
+  void _mostrarAlerta() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('¡Enhorabuena!'),
+          content: const Text('¡Llevas 5 puntos!'),
+          actions: <Widget>[
+            TextButton(
+              child: const Text('OK'),
+              onPressed: () {
+                Navigator.of(context).pop(); // Cierra el dialog
+              },
+            ),
+          ],
+        );
+      },
+    );
   }
 
   @override
@@ -125,11 +99,7 @@ class juegosEstado extends State<Juego> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Juego de la Imagen'),
-<<<<<<< HEAD
-        centerTitle: true,
-=======
         centerTitle: true, // Centrar el título del AppBar
->>>>>>> 50301b26d50e7bf2c41f5c69f316bda7767fddaf
       ),
       body: Stack(
         children: [
@@ -147,19 +117,11 @@ class juegosEstado extends State<Juego> {
           ),
           Center(
             child: Column(
-<<<<<<< HEAD
-              mainAxisAlignment: MainAxisAlignment.start,
-=======
->>>>>>> 50301b26d50e7bf2c41f5c69f316bda7767fddaf
               children: [
                 const SizedBox(height: 20),
                 Text(
                   'Puntos: $puntos',
-<<<<<<< HEAD
-                  style: Theme.of(context).textTheme.titleLarge, // Aplica el tema para el texto
-=======
                   style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
->>>>>>> 50301b26d50e7bf2c41f5c69f316bda7767fddaf
                 ),
               ],
             ),
@@ -168,8 +130,4 @@ class juegosEstado extends State<Juego> {
       ),
     );
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 50301b26d50e7bf2c41f5c69f316bda7767fddaf
