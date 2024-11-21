@@ -56,11 +56,27 @@ class MenuLateral extends StatelessWidget {
             },
           ),
           ListTile(
-            title: const Text("Entrega 3"),
+            title: const Text("Ejercicio 5"),
             onTap: () {
               Navigator.of(context).pop();
               Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => const Entrega3()));
+                  builder: (BuildContext context) => const Ejercicio5()));
+            },
+          ),
+          ListTile(
+            title: const Text("Ejercicio 6"),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => const Ejercicio6()));
+            },
+          ),
+          ListTile(
+            title: const Text("Reto"),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => const RetoAPP()));
             },
           ),
           ListTile(
@@ -69,6 +85,14 @@ class MenuLateral extends StatelessWidget {
               Navigator.of(context).pop();
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (BuildContext context) => const Instagram()));
+            },
+          ),
+          ListTile(
+            title: const Text("Entrega 3"),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => const Entrega3()));
             },
           ),
         ],
