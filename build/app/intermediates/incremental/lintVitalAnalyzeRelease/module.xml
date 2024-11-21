@@ -1,19 +1,11 @@
 <lint-module
     format="1"
-<<<<<<< HEAD
     dir="C:\Users\ruben\Desktop\Aplicaciones flutter\android\app"
-=======
-    dir="C:\Users\ruben\Documents\GitHub\Ejercicio-Flutter\android\app"
->>>>>>> 50301b26d50e7bf2c41f5c69f316bda7767fddaf
     name=":app"
     type="APP"
     maven="android:app:"
     agpVersion="8.1.0"
-<<<<<<< HEAD
     buildFolder="C:\Users\ruben\Desktop\Aplicaciones flutter\build\app"
-=======
-    buildFolder="C:\Users\ruben\Documents\GitHub\Ejercicio-Flutter\build\app"
->>>>>>> 50301b26d50e7bf2c41f5c69f316bda7767fddaf
     bootClassPath="C:\Users\ruben\AppData\Local\Android\sdk\platforms\android-34\android.jar;C:\Users\ruben\AppData\Local\Android\sdk\build-tools\33.0.1\core-lambda-stubs.jar"
     javaSourceLevel="1.8"
     compileTarget="android-34">
