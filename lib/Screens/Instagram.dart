@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Screens/MenuLateral.dart'; // Importa el Drawer
 
 class Instagram extends StatelessWidget {
   const Instagram({super.key});
@@ -29,7 +30,21 @@ class InstagramProfileState extends State<InstagramProfile> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Cristiano Ronaldo'),
+        automaticallyImplyLeading: false,
+        actions: [
+          Builder(
+            builder: (BuildContext context) {
+              return IconButton(
+                icon: const Icon(Icons.menu),
+                onPressed: () {
+                  Scaffold.of(context).openDrawer(); // Abre el Drawer al presionar el ícono
+                },
+              );
+            },
+          ),
+        ],
       ),
+      drawer: const MenuLateral(), // Drawer personalizado
       body: ListView(
         children: [
           Padding(
@@ -88,22 +103,25 @@ class InstagramProfileState extends State<InstagramProfile> {
                   ),
                 ),
                 const SizedBox(height: 10),
-                // Story Highlights
-                const Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    StoryHighlight(image: 'asset/images/cristiano0.jpg', label: 'Pilotando'),
-                    SizedBox(width: 50),
-                    StoryHighlight(image: 'asset/images/cristiano1.jpg', label: 'Praga'),
-                    SizedBox(width: 50),
-                    StoryHighlight(image: 'asset/images/cristiano2.jpg', label: 'Arquitectura'),
-                    SizedBox(width: 50),
-                    StoryHighlight(image: 'asset/images/cristiano3.jpg', label: 'Lisboa'),
-                    SizedBox(width: 50),
-                    StoryHighlight(image: 'asset/images/cristiano4.jpg', label: 'Málaga'),
-                    SizedBox(width: 50),
-                    StoryHighlight(image: 'asset/images/cristiano5.jpg', label: 'Marbella'),
-                  ],
+                // Story Highlights as a horizontal ListView
+                SizedBox(
+                  height: 100, // Altura del ListView
+                  child: ListView(
+                    scrollDirection: Axis.horizontal, // Scroll horizontal
+                    children: const [
+                      StoryHighlight(image: 'asset/images/cristiano0.jpg', label: 'Pilotando'),
+                      SizedBox(width: 10),
+                      StoryHighlight(image: 'asset/images/cristiano1.jpg', label: 'Praga'),
+                      SizedBox(width: 10),
+                      StoryHighlight(image: 'asset/images/cristiano2.jpg', label: 'Arquitectura'),
+                      SizedBox(width: 10),
+                      StoryHighlight(image: 'asset/images/cristiano3.jpg', label: 'Lisboa'),
+                      SizedBox(width: 10),
+                      StoryHighlight(image: 'asset/images/cristiano4.jpg', label: 'Málaga'),
+                      SizedBox(width: 10),
+                      StoryHighlight(image: 'asset/images/cristiano5.jpg', label: 'Marbella'),
+                    ],
+                  ),
                 ),
                 const SizedBox(height: 10),
                 // Icon section
@@ -180,8 +198,10 @@ class StoryHighlight extends StatelessWidget {
       children: [
         CircleAvatar(
           backgroundImage: AssetImage(image),
+          radius: 35, // Tamaño del avatar
         ),
-        Text(label),
+        const SizedBox(height: 5), // Espacio entre avatar y texto
+        Text(label, style: const TextStyle(fontSize: 12)),
       ],
     );
   }

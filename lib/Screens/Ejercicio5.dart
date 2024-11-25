@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Screens/MenuLateral.dart';
 
 class Ejercicio5 extends StatelessWidget {
   const Ejercicio5({super.key});
@@ -9,10 +10,27 @@ class Ejercicio5 extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: AppThemes1.mainTheme, // Aplica el tema centralizado
       home: Scaffold(
-        appBar: AppBar(
+        appBar: AppBar(titleTextStyle: const TextStyle(
+          fontSize: 18,
+        ),
           title: const Text('Ejemplo de filas y columnas anidadas'),
           centerTitle: true,
+          automaticallyImplyLeading: false, // Elimina el ícono predeterminado de menú a la izquierda
+          actions: [
+            // Icono de menú en la esquina superior derecha
+            Builder(
+              builder: (BuildContext context) {
+                return IconButton(
+                  icon: const Icon(Icons.menu),
+                  onPressed: () {
+                    Scaffold.of(context).openDrawer(); // Abre el Drawer
+                  },
+                );
+              },
+            ),
+          ],
         ),
+        drawer: const MenuLateral(), // Este es el menú lateral que se abrirá
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

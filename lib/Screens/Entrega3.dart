@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Screens/MenuLateral.dart'; // Importación del Drawer personalizado
 
 void main() {
   runApp(const Entrega3());
@@ -13,6 +14,7 @@ class Entrega3 extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'Juego de la Imagen',
+      debugShowCheckedModeBanner: false, // Desactivamos el banner de debug
       home: Juego(),
     );
   }
@@ -49,7 +51,7 @@ class juegosEstado extends State<Juego> {
         // Cambia posición de la imagen de manera aleatoria
         double tamanioPantalla = MediaQuery.of(context).size.height / 2;
         double coordenadaYAleatoria = Random().nextDouble() * (tamanioPantalla - 50) + 50;
-        
+
         posicionX = Random().nextDouble() * 0.9; // Posición X aleatoria hasta el 90% de la pantalla
         posicionY = coordenadaYAleatoria / MediaQuery.of(context).size.height; // Posición Y aleatoria dentro de límites seguros
 
@@ -100,7 +102,21 @@ class juegosEstado extends State<Juego> {
       appBar: AppBar(
         title: const Text('Juego de la Imagen'),
         centerTitle: true, // Centrar el título del AppBar
+        automaticallyImplyLeading: false, // Desactiva el icono por defecto del Drawer
+        actions: [
+          Builder(
+            builder: (BuildContext context) {
+              return IconButton(
+                icon: const Icon(Icons.menu), // Icono del Drawer
+                onPressed: () {
+                  Scaffold.of(context).openDrawer(); // Abre el Drawer
+                },
+              );
+            },
+          ),
+        ],
       ),
+      drawer: const MenuLateral(), // Drawer personalizado
       body: Stack(
         children: [
           Positioned(

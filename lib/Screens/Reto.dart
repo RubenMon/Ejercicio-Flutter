@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Screens/MenuLateral.dart'; // Importa el menú lateral
 
 class RetoAPP extends StatelessWidget {
   const RetoAPP({super.key});
@@ -8,7 +9,8 @@ class RetoAPP extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(centerTitle: true,
+        appBar: AppBar(
+          centerTitle: true,
           title: const Text('Challenge'),
           titleTextStyle: const TextStyle(
             color: Colors.white,
@@ -16,7 +18,23 @@ class RetoAPP extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
           backgroundColor: Colors.blueAccent,
+          // No queremos ningún ícono en la esquina izquierda
+          automaticallyImplyLeading: false,
+          // El ícono de menú solo aparece en la esquina superior derecha
+          actions: [
+            Builder(
+              builder: (BuildContext context) {
+                return IconButton(
+                  icon: const Icon(Icons.menu),
+                  onPressed: () {
+                    Scaffold.of(context).openDrawer(); // Abre el Drawer al presionar el ícono
+                  },
+                );
+              },
+            ),
+          ],
         ),
+        drawer: const MenuLateral(), // Usamos el Drawer de MenuLateral
         body: Align(
           alignment: Alignment.topCenter,
           child: Container(

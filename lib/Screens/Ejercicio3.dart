@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Screens/MenuLateral.dart'; // Asegúrate de que este archivo sea importado si lo necesitas
 
 class Ejercicio3 extends StatelessWidget {
   const Ejercicio3({super.key});
@@ -8,7 +9,22 @@ class Ejercicio3 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Ejercicio 3"),
+        automaticallyImplyLeading: false, // Evita que el ícono de menú aparezca en la izquierda
+        actions: [
+          // Usamos un Builder para obtener el contexto correcto
+          Builder(
+            builder: (BuildContext context) {
+              return IconButton(
+                icon: const Icon(Icons.menu),
+                onPressed: () {
+                  Scaffold.of(context).openDrawer(); // Abre el Drawer
+                },
+              );
+            },
+          ),
+        ],
       ),
+      drawer: const MenuLateral(), // Este es el menú lateral que se abrirá
       body: const Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

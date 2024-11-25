@@ -1,29 +1,55 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Screens/MenuLateral.dart'; // Asegúrate de que MenuLateral está correctamente implementado.
 
 class Ejercicio6 extends StatelessWidget {
   const Ejercicio6({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: AppThemes.mainTheme, // Usa el mismo tema definido
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: ContadorScreen(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
+class ContadorScreen extends StatelessWidget {
+  const ContadorScreen({super.key});
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Contador'),
+        actions: [
+          // Icono de menú en la esquina superior derecha
+          Builder(
+            builder: (BuildContext context) {
+              return IconButton(
+                icon: const Icon(Icons.menu),
+                onPressed: () {
+                  Scaffold.of(context).openDrawer(); // Abre el Drawer
+                },
+              );
+            },
+          ),
+        ],
+      ),
+      drawer: const MenuLateral(), // Usamos el Drawer de MenuLateral
+      body: const Contador(), // Cuerpo de la pantalla
+    );
+  }
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class Contador extends StatefulWidget {
+  const Contador({super.key});
+
+  @override
+  // ignore: library_private_types_in_public_api
+  _ContadorState createState() => _ContadorState();
+}
+
+class _ContadorState extends State<Contador> {
   int _counter = 0;
 
   void _incrementCounter() {
@@ -33,9 +59,11 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _decrementCounter() {
-    setState(() {
-      _counter--;
-    });
+    if (_counter > 0) {
+      setState(() {
+        _counter--;
+      });
+    }
   }
 
   void _resetCounter() {
@@ -46,75 +74,38 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: Row(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          FloatingActionButton(
-            onPressed: _decrementCounter,
-            tooltip: 'Decrement',
-            child: const Icon(Icons.remove),
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Text(
+            'Contador: $_counter',
+            style: Theme.of(context).textTheme.headlineMedium,
           ),
-          const SizedBox(width: 10), // Espacio entre los botones
-          FloatingActionButton(
-            onPressed: _resetCounter,
-            tooltip: 'Reset',
-            child: const Icon(Icons.refresh),
-          ),
-          const SizedBox(width: 10), // Espacio entre los botones
-          FloatingActionButton(
-            onPressed: _incrementCounter,
-            tooltip: 'Increment',
-            child: const Icon(Icons.add),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              FloatingActionButton(
+                onPressed: _decrementCounter,
+                tooltip: 'Decrement',
+                child: const Icon(Icons.remove),
+              ),
+              const SizedBox(width: 10),
+              FloatingActionButton(
+                onPressed: _resetCounter,
+                tooltip: 'Reset',
+                child: const Icon(Icons.refresh),
+              ),
+              const SizedBox(width: 10),
+              FloatingActionButton(
+                onPressed: _incrementCounter,
+                tooltip: 'Increment',
+                child: const Icon(Icons.add),
+              ),
+            ],
           ),
         ],
       ),
     );
   }
-}
-
-class AppThemes {
-  static final ThemeData mainTheme = ThemeData(
-    // Define el color del scaffold
-    scaffoldBackgroundColor: Colors.lightBlue.shade50,
-    // Personalización de la AppBar
-    appBarTheme: const AppBarTheme(
-      backgroundColor: Colors.blueAccent,
-      titleTextStyle: TextStyle(
-        color: Colors.white,
-        fontSize: 20,
-        fontWeight: FontWeight.bold,
-      ),
-      iconTheme: IconThemeData(color: Colors.white),
-    ),
-    // Define estilos globales de texto
-    textTheme: const TextTheme(
-      bodyMedium: TextStyle(
-        fontSize: 16,
-        color: Colors.black87,
-      ),
-      titleLarge: TextStyle(
-        fontSize: 18,
-        fontWeight: FontWeight.bold,
-        color: Colors.black,
-      ),
-    ),
-  );
 }
