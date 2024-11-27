@@ -1,4 +1,4 @@
-import 'package:flutter_application_1/rutas/rutas.dart';
+import 'package:flutter/material.dart';
 
 class MenuLateral extends StatelessWidget {
   const MenuLateral({super.key});
@@ -12,10 +12,11 @@ class MenuLateral extends StatelessWidget {
             accountName: Text("Rubén Montero Martín"),
             accountEmail: Text("rmonmar0810@g.educaand.es"),
             decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage(
-                        "asset/images/malaga2.jpg"),
-                    fit: BoxFit.cover)),
+              image: DecorationImage(
+                image: AssetImage("asset/images/malaga2.jpg"),
+                fit: BoxFit.cover,
+              ),
+            ),
           ),
           Ink(
             color: const Color.fromARGB(255, 234, 128, 22),
@@ -25,74 +26,65 @@ class MenuLateral extends StatelessWidget {
                 style: TextStyle(color: Colors.white),
               ),
               onTap: () {
-                Navigator.of(context).pop();
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) => const Ejercicio1()));
+                Navigator.of(context).pop(); // Cierra el Drawer
+                Navigator.pushNamed(context, '/primera'); // Navega a Ejercicio 1
               },
             ),
           ),
           ListTile(
             title: const Text("Ejercicio 2"),
             onTap: () {
-              Navigator.of(context).pop();
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => const Ejercicio2()));
+              Navigator.of(context).pop(); // Cierra el Drawer
+              Navigator.pushNamed(context, '/segunda'); // Navega a Ejercicio 2
             },
           ),
           ListTile(
             title: const Text("Ejercicio 3"),
             onTap: () {
-              Navigator.of(context).pop();
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => const Ejercicio3()));
+              Navigator.of(context).pop(); // Cierra el Drawer
+              Navigator.pushNamed(context, '/tercera'); // Navega a Ejercicio 3
             },
           ),
           ListTile(
             title: const Text("Ejercicio 4"),
             onTap: () {
-              Navigator.of(context).pop();
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => const Ejercicio4()));
+              Navigator.of(context).pop(); // Cierra el Drawer
+              Navigator.pushNamed(context, '/cuarta'); // Navega a Ejercicio 4
             },
           ),
           ListTile(
             title: const Text("Ejercicio 5"),
             onTap: () {
-              Navigator.of(context).pop();
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => const Ejercicio5()));
+              Navigator.of(context).pop(); // Cierra el Drawer
+              Navigator.pushNamed(context, '/quinta'); // Navega a Ejercicio 5
             },
           ),
           ListTile(
             title: const Text("Ejercicio 6"),
             onTap: () {
-              Navigator.of(context).pop();
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => const Ejercicio6()));
+              Navigator.of(context).pop(); // Cierra el Drawer
+              Navigator.pushNamed(context, '/sexta'); // Navega a Ejercicio 6
             },
           ),
           ListTile(
             title: const Text("Reto"),
             onTap: () {
-              Navigator.of(context).pop();
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => const RetoAPP()));
+              Navigator.of(context).pop(); // Cierra el Drawer
+              Navigator.pushNamed(context, '/septima'); // Navega a Reto
             },
           ),
           ListTile(
             title: const Text("Instagram"),
             onTap: () {
-              Navigator.of(context).pop();
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => const Instagram()));
+              Navigator.of(context).pop(); // Cierra el Drawer
+              Navigator.pushNamed(context, '/octava'); // Navega a Instagram
             },
           ),
           ListTile(
             title: const Text("Entrega 3"),
             onTap: () {
-              Navigator.of(context).pop();
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => const Entrega3()));
+              Navigator.of(context).pop(); // Cierra el Drawer
+              Navigator.pushNamed(context, '/novena'); // Navega a Entrega 3
             },
           ),
         ],
@@ -100,4 +92,3 @@ class MenuLateral extends StatelessWidget {
     );
   }
 }
-

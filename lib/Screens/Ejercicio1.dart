@@ -25,7 +25,7 @@ class Ejercicio1 extends StatelessWidget {
           ),
         ],
       ),
-      drawer: const MenuLateral(), // Este es el menú lateral que se abrirá
+      drawer: const MenuLateral() as Widget, // Este es el menú lateral que se abrirá
       body: Center(
         child: Text(
           'Rubén Montero Martín',

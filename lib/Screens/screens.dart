@@ -1,0 +1,10 @@
+export 'package:flutter/material.dart';
+export 'package:flutter_application_1/Screens/ejercicio1.dart';
+export 'package:flutter_application_1/Screens/ejercicio2.dart';
+export 'package:flutter_application_1/Screens/ejercicio3.dart';
+export 'package:flutter_application_1/Screens/ejercicio4.dart';
+export 'package:flutter_application_1/Screens/entrega3.dart';
+export 'package:flutter_application_1/Screens/instagram.dart';
+export 'package:flutter_application_1/Screens/reto.dart';
+export 'package:flutter_application_1/Screens/ejercicio5.dart';
+export 'package:flutter_application_1/Screens/ejercicio6.dart';

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/rutas/rutas.dart';
 import 'Screens/menuLateral.dart';
 
 void main() => runApp(const MyApp());
@@ -9,8 +10,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Ejemplo de drawer(Rubén Montero Martín)',
-      debugShowCheckedModeBanner: false, // Desactivar el banner de depuración
+      title: 'Ejemplo de Drawer (Rubén Montero Martín)',
+      debugShowCheckedModeBanner: false, // Desactiva el banner de depuración
       theme: ThemeData(
         // Define el color del scaffold
         scaffoldBackgroundColor: Colors.lightBlue.shade50,
@@ -38,14 +39,24 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text("Actividad01(Drawer)"),
-        ),
-        drawer: const MenuLateral(),
-        body: const Center(
-          child: Text("https://github.com/RubenMon/Ejercicio-Flutter.git"),
-        ),
+      initialRoute: '/', // Ruta inicial
+      routes: appRoutes, // Mapa de rutas definido en rutas.dart
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Actividad01 (Drawer)"),
+      ),
+      drawer: const MenuLateral(), // Uso del menu lateral modular
+      body: const Center(
+        child: Text("https://github.com/RubenMon/Ejercicio-Flutter.git"),
       ),
     );
   }

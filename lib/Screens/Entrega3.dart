@@ -1,11 +1,7 @@
 import 'dart:async';
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Screens/MenuLateral.dart'; // Importación del Drawer personalizado
-
-void main() {
-  runApp(const Entrega3());
-}
+import 'package:flutter_application_1/Screens/MenuLateral.dart';
 
 class Entrega3 extends StatelessWidget {
   const Entrega3({super.key});
@@ -14,7 +10,7 @@ class Entrega3 extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'Juego de la Imagen',
-      debugShowCheckedModeBanner: false, // Desactivamos el banner de debug
+      debugShowCheckedModeBanner: false,
       home: Juego(),
     );
   }
@@ -25,11 +21,11 @@ class Juego extends StatefulWidget {
 
   @override
   // ignore: library_private_types_in_public_api
-  juegosEstado createState() => juegosEstado();
+  _juegosEstado createState() => _juegosEstado();
 }
 
 // ignore: camel_case_types
-class juegosEstado extends State<Juego> {
+class _juegosEstado extends State<Juego> {
   int puntos = 0;
   double posicionX = 0;
   double posicionY = 0;
@@ -116,7 +112,7 @@ class juegosEstado extends State<Juego> {
           ),
         ],
       ),
-      drawer: const MenuLateral(), // Drawer personalizado
+      drawer: const MenuLateral() as Widget, // Drawer personalizado
       body: Stack(
         children: [
           Positioned(
@@ -125,7 +121,7 @@ class juegosEstado extends State<Juego> {
             child: GestureDetector(
               onTap: pulsarImagen,
               child: Image.asset(
-                'asset/images/malaga2.jpg',
+                'asset/images/malaga2.jpg', // Reemplaza esta ruta si es necesario
                 width: 100,
                 height: 100,
               ),

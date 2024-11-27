@@ -24,7 +24,7 @@ class Ejercicio3 extends StatelessWidget {
           ),
         ],
       ),
-      drawer: const MenuLateral(), // Este es el menú lateral que se abrirá
+      drawer: const MenuLateral() as Widget, // Este es el menú lateral que se abrirá
       body: const Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

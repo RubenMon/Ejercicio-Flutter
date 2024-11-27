@@ -1,10 +1,15 @@
-export 'package:flutter/material.dart';
-export 'package:flutter_application_1/Screens/ejercicio1.dart';
-export 'package:flutter_application_1/Screens/ejercicio2.dart';
-export 'package:flutter_application_1/Screens/ejercicio3.dart';
-export 'package:flutter_application_1/Screens/ejercicio4.dart';
-export 'package:flutter_application_1/Screens/entrega3.dart';
-export 'package:flutter_application_1/Screens/instagram.dart';
-export 'package:flutter_application_1/Screens/reto.dart';
-export 'package:flutter_application_1/Screens/ejercicio5.dart';
-export 'package:flutter_application_1/Screens/ejercicio6.dart';
+import 'package:flutter_application_1/Screens/screens.dart';
+import 'package:flutter_application_1/main.dart';
+
+final Map<String, WidgetBuilder> appRoutes = {
+  '/': (context) => const HomePage(),
+  '/primera': (context) => const Ejercicio1(),
+  '/segunda': (context) => const Ejercicio2(),
+  '/tercera': (context) => const Ejercicio3(),
+  '/cuarta': (context) => const Ejercicio4(),
+  '/quinta': (context) => const Ejercicio5(),
+  '/sexta': (context) => const Ejercicio6(),
+  '/septima': (context) => const RetoAPP(),
+  '/octava': (context) => const Instagram(),
+  '/novena': (context) => const Juego(),
+};

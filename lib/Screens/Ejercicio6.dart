@@ -1,28 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Screens/MenuLateral.dart'; // Asegúrate de que MenuLateral está correctamente implementado.
+import 'package:flutter_application_1/Screens/MenuLateral.dart';
 
 class Ejercicio6 extends StatelessWidget {
   const Ejercicio6({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: ContadorScreen(),
-    );
-  }
-}
-
-class ContadorScreen extends StatelessWidget {
-  const ContadorScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Contador'),
+        title: const Text("Contador"),
+        automaticallyImplyLeading: false,
         actions: [
-          // Icono de menú en la esquina superior derecha
           Builder(
             builder: (BuildContext context) {
               return IconButton(
@@ -35,8 +23,8 @@ class ContadorScreen extends StatelessWidget {
           ),
         ],
       ),
-      drawer: const MenuLateral(), // Usamos el Drawer de MenuLateral
-      body: const Contador(), // Cuerpo de la pantalla
+      drawer: const MenuLateral() as Widget,
+      body: const Contador(),
     );
   }
 }
