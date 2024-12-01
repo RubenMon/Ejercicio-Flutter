@@ -87,6 +87,13 @@ class MenuLateral extends StatelessWidget {
               Navigator.pushNamed(context, '/novena'); // Navega a Entrega 3
             },
           ),
+          ListTile(
+            title: const Text("Siete y medio"),
+            onTap: () {
+              Navigator.of(context).pop(); // Cierra el Drawer
+              Navigator.pushNamed(context, '/decima'); // Navega a Entrega 3
+            },
+          ),
         ],
       ),
     );

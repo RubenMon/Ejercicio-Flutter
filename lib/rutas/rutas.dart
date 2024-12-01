@@ -12,4 +12,5 @@ final Map<String, WidgetBuilder> appRoutes = {
   '/septima': (context) => const RetoAPP(),
   '/octava': (context) => const Instagram(),
   '/novena': (context) => const Juego(),
+  '/decima': (context) => const SieteYMedioGame(),
 };
