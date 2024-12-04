@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Screens/menuLateral.dart';
 import 'dart:math';
-void main() {
-  runApp(const AdivinaNumero());
-}
 
 class AdivinaNumero extends StatefulWidget {
   const AdivinaNumero({super.key});
