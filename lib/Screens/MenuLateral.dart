@@ -94,6 +94,20 @@ class MenuLateral extends StatelessWidget {
               Navigator.pushNamed(context, '/decima'); // Navega a Entrega 3
             },
           ),
+          ListTile(
+            title: const Text("Formulario"),
+            onTap: () {
+              Navigator.of(context).pop(); // Cierra el Drawer
+              Navigator.pushNamed(context, '/undecima'); // Navega a Formulario
+            },
+          ),
+          ListTile(
+            title: const Text("Adivina el número"),
+            onTap: () {
+              Navigator.of(context).pop(); // Cierra el Drawer
+              Navigator.pushNamed(context, '/duodecima'); // Navega a Formulario
+            },
+          ),
         ],
       ),
     );

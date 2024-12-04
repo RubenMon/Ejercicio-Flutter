@@ -13,4 +13,6 @@ final Map<String, WidgetBuilder> appRoutes = {
   '/octava': (context) => const Instagram(),
   '/novena': (context) => const Juego(),
   '/decima': (context) => const SieteYMedioGame(),
+  '/undecima': (context) => const Formulario(),
+  '/duodecima': (context) => const AdivinaNumero(),
 };
