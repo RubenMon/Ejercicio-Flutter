@@ -9,5 +9,5 @@ export 'package:flutter_application_1/Screens/reto.dart';
 export 'package:flutter_application_1/Screens/ejercicio5.dart';
 export 'package:flutter_application_1/Screens/ejercicio6.dart';
 export 'package:flutter_application_1/Screens/sieteYMedio.dart';
-export 'package:flutter_application_1/Screens/ejercicio7.dart';
-export 'package:flutter_application_1/Screens/ejercicio8.dart';
+export 'package:flutter_application_1/Screens/formulario1.dart';
+export 'package:flutter_application_1/Screens/advinaNumero.dart';
