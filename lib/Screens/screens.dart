@@ -11,3 +11,4 @@ export 'package:flutter_application_1/Screens/ejercicio6.dart';
 export 'package:flutter_application_1/Screens/sieteYMedio.dart';
 export 'package:flutter_application_1/Screens/formulario1.dart';
 export 'package:flutter_application_1/Screens/advinaNumero.dart';
+export 'package:flutter_application_1/Screens/mainFormularioNoDual2.dart';

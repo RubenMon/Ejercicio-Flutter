@@ -15,4 +15,5 @@ final Map<String, WidgetBuilder> appRoutes = {
   '/decima': (context) => const SieteYMedioGame(),
   '/undecima': (context) => const Formulario(),
   '/duodecima': (context) => const AdivinaNumero(),
+  '/tredecima': (context) => const FormularioSwitch(),
 };

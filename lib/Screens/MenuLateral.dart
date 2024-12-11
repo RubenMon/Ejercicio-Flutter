@@ -108,6 +108,13 @@ class MenuLateral extends StatelessWidget {
               Navigator.pushNamed(context, '/duodecima'); // Navega a Formulario
             },
           ),
+          ListTile(
+            title: const Text("Formulario 2 - No Dual"),
+            onTap: () {
+              Navigator.of(context).pop(); // Cierra el Drawer
+              Navigator.pushNamed(context, '/tredecima'); // Navega a Formulario
+            },
+          ),
         ],
       ),
     );
