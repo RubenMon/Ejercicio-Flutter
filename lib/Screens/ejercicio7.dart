@@ -5,7 +5,6 @@ class Formulario extends StatefulWidget {
   const Formulario({super.key});
 
   @override
-  // ignore: library_private_types_in_public_api
   _RegistrationFormState createState() => _RegistrationFormState();
 }
 
@@ -19,6 +18,10 @@ class _RegistrationFormState extends State<Formulario> {
   final TextEditingController _dateController = TextEditingController();
 
   DateTime? _selectedDate;
+
+  // Estado para Radio Buttons y Checkboxes
+  String? _selectedGender;
+  bool _acceptTerms = false;
 
   @override
   void dispose() {
@@ -66,7 +69,6 @@ class _RegistrationFormState extends State<Formulario> {
                   labelText: 'Nombre Completo',
                   border: OutlineInputBorder(),
                 ),
-                obscureText: false,
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Por favor, ingresa tu nombre';
@@ -77,8 +79,8 @@ class _RegistrationFormState extends State<Formulario> {
                   }
                   return null;
                 },
-                keyboardType: TextInputType.text, // Asegura teclado estándar
-                textCapitalization: TextCapitalization.words, // Para mayúsculas iniciales
+                keyboardType: TextInputType.text,
+                textCapitalization: TextCapitalization.words,
               ),
               const SizedBox(height: 16.0),
 
@@ -89,7 +91,6 @@ class _RegistrationFormState extends State<Formulario> {
                   labelText: 'Correo Electronico',
                   border: OutlineInputBorder(),
                 ),
-                obscureText: false,
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Por favor, ingresa tu correo';
@@ -98,7 +99,7 @@ class _RegistrationFormState extends State<Formulario> {
                   }
                   return null;
                 },
-                keyboardType: TextInputType.emailAddress, // Teclado para email con @
+                keyboardType: TextInputType.emailAddress,
               ),
               const SizedBox(height: 16.0),
 
@@ -142,13 +143,55 @@ class _RegistrationFormState extends State<Formulario> {
               ),
               const SizedBox(height: 16.0),
 
+              // Radio Buttons para Género
+              const Text('Género:', style: TextStyle(fontSize: 16.0)),
+              RadioListTile<String>(
+                title: const Text('Masculino'),
+                value: 'Masculino',
+                groupValue: _selectedGender,
+                onChanged: (value) {
+                  setState(() {
+                    _selectedGender = value;
+                  });
+                },
+              ),
+              RadioListTile<String>(
+                title: const Text('Femenino'),
+                value: 'Femenino',
+                groupValue: _selectedGender,
+                onChanged: (value) {
+                  setState(() {
+                    _selectedGender = value;
+                  });
+                },
+              ),
+              const SizedBox(height: 16.0),
+
+              // Checkbox para Términos y Condiciones
+              CheckboxListTile(
+                title: const Text('Acepto los términos y condiciones'),
+                value: _acceptTerms,
+                onChanged: (value) {
+                  setState(() {
+                    _acceptTerms = value ?? false;
+                  });
+                },
+              ),
+              const SizedBox(height: 16.0),
+
               // Botón de envío
               ElevatedButton(
                 onPressed: () {
-                  if (llaveFormulario.currentState!.validate()) {
+                  if (llaveFormulario.currentState!.validate() && _acceptTerms) {
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(
                         content: Text('Formulario enviado exitosamente'),
+                      ),
+                    );
+                  } else if (!_acceptTerms) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text('Debes aceptar los términos y condiciones'),
                       ),
                     );
                   }
