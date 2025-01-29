@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/ruben/Desktop/Aplicaciones flutter/flutter_application_1/windows/flutter
+# Install script for directory: C:/Users/Alumnado2DAM/Desktop/TareasFlutter/Ejercicio-Flutter/windows/flutter
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -7,6 +7,7 @@ class FormularioSwitch extends StatefulWidget {
   const FormularioSwitch({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _FormularioSwitchState createState() => _FormularioSwitchState();
 }
 

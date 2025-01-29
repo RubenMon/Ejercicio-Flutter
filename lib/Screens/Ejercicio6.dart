@@ -1,98 +1,77 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Screens/MenuLateral.dart';
 
-class Ejercicio6 extends StatelessWidget {
-  const Ejercicio6({super.key});
+// Aquí deberías tener tu clase MenuLateral ya definida.
+class ContadorPage extends StatefulWidget {
+  const ContadorPage({super.key});
+
+  @override
+  // ignore: library_private_types_in_public_api
+  _ContadorPageState createState() => _ContadorPageState();
+}
+
+class _ContadorPageState extends State<ContadorPage> {
+  int _contador = 0;
+
+  void _sumar() {
+    setState(() {
+      _contador++;
+    });
+  }
+
+  void _restar() {
+    setState(() {
+      _contador--;
+    });
+  }
+
+  void _resetear() {
+    setState(() {
+      _contador = 0;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Contador"),
-        automaticallyImplyLeading: false,
-        actions: [
-          Builder(
-            builder: (BuildContext context) {
-              return IconButton(
-                icon: const Icon(Icons.menu),
-                onPressed: () {
-                  Scaffold.of(context).openDrawer(); // Abre el Drawer
-                },
-              );
-            },
-          ),
-        ],
+        title: const Text('Contador'),
       ),
-      drawer: const MenuLateral() as Widget,
-      body: const Contador(),
-    );
-  }
-}
-
-class Contador extends StatefulWidget {
-  const Contador({super.key});
-
-  @override
-  // ignore: library_private_types_in_public_api
-  _ContadorState createState() => _ContadorState();
-}
-
-class _ContadorState extends State<Contador> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  void _decrementCounter() {
-    if (_counter > 0) {
-      setState(() {
-        _counter--;
-      });
-    }
-  }
-
-  void _resetCounter() {
-    setState(() {
-      _counter = 0;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Text(
-            'Contador: $_counter',
-            style: Theme.of(context).textTheme.headlineMedium,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              FloatingActionButton(
-                onPressed: _decrementCounter,
-                tooltip: 'Decrement',
-                child: const Icon(Icons.remove),
-              ),
-              const SizedBox(width: 10),
-              FloatingActionButton(
-                onPressed: _resetCounter,
-                tooltip: 'Reset',
-                child: const Icon(Icons.refresh),
-              ),
-              const SizedBox(width: 10),
-              FloatingActionButton(
-                onPressed: _incrementCounter,
-                tooltip: 'Increment',
-                child: const Icon(Icons.add),
-              ),
-            ],
-          ),
-        ],
+      drawer: const MenuLateral(), // Aquí se usa el Drawer con la clase MenuLateral
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            const Text(
+              'Contador:',
+              style: TextStyle(fontSize: 24),
+            ),
+            Text(
+              '$_contador',
+              style: const TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                IconButton(
+                  icon: const Icon(Icons.add),
+                  onPressed: _sumar,
+                  iconSize: 40,
+                ),
+                IconButton(
+                  icon: const Icon(Icons.remove),
+                  onPressed: _restar,
+                  iconSize: 40,
+                ),
+                IconButton(
+                  icon: const Icon(Icons.refresh),
+                  onPressed: _resetear,
+                  iconSize: 40,
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

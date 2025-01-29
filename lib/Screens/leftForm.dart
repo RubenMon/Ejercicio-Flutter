@@ -25,20 +25,25 @@ class _LeftFormState extends State<LeftForm> {
             decoration: const InputDecoration(labelText: 'Nombre Completo'),
             validator: (value) {
               if (value == null || value.isEmpty) {
-                return 'Por favor ingrese su nombre completo';
+                return 'Por favor, ingresa tu nombre';
+              } else if (!RegExp(r'^[A-ZÁÉÍÓÚÑ][a-zA-ZáéíóúÁÉÍÓÚñÑ\s]*$').hasMatch(value)) {
+                return 'El nombre debe empezar con mayúscula y solo puede contener letras, tildes, la letra ñ y espacios';
+              } else if (value.length < 3) {
+                return 'El nombre debe tener al menos 3 caracteres';
               }
-              return null;
+                return null;
             },
           ),
           TextFormField(
             decoration: const InputDecoration(labelText: 'Correo Electrónico'),
             keyboardType: TextInputType.emailAddress,
-            validator: (value) {
-              final emailRegex = RegExp(r'^[^@\s]+@[^@\s]+\.[^@\s]+$');
-              if (value == null || !emailRegex.hasMatch(value)) {
-                return 'Por favor ingrese un correo válido';
+           validator: (value) {
+              if (value == null || value.isEmpty) {
+                return 'Por favor, ingresa tu correo';
+              } else if (!RegExp(r'^[^@]+@[^@]+\.[^@]+').hasMatch(value)) {
+                return 'Ingresa un correo válido';
               }
-              return null;
+                return null;
             },
           ),
           TextFormField(

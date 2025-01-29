@@ -26,93 +26,93 @@ class MenuLateral extends StatelessWidget {
                 style: TextStyle(color: Colors.white),
               ),
               onTap: () {
-                Navigator.of(context).pop(); // Cierra el Drawer
-                Navigator.pushNamed(context, '/primera'); // Navega a Ejercicio 1
+                Navigator.of(context).pop();
+                Navigator.pushNamed(context, '/primera');
               },
             ),
           ),
           ListTile(
             title: const Text("Ejercicio 2"),
             onTap: () {
-              Navigator.of(context).pop(); // Cierra el Drawer
-              Navigator.pushNamed(context, '/segunda'); // Navega a Ejercicio 2
+              Navigator.of(context).pop();
+              Navigator.pushNamed(context, '/segunda');
             },
           ),
           ListTile(
             title: const Text("Ejercicio 3"),
             onTap: () {
-              Navigator.of(context).pop(); // Cierra el Drawer
-              Navigator.pushNamed(context, '/tercera'); // Navega a Ejercicio 3
+              Navigator.of(context).pop();
+              Navigator.pushNamed(context, '/tercera');
             },
           ),
           ListTile(
             title: const Text("Ejercicio 4"),
             onTap: () {
-              Navigator.of(context).pop(); // Cierra el Drawer
-              Navigator.pushNamed(context, '/cuarta'); // Navega a Ejercicio 4
+              Navigator.of(context).pop();
+              Navigator.pushNamed(context, '/cuarta');
             },
           ),
           ListTile(
             title: const Text("Ejercicio 5"),
             onTap: () {
-              Navigator.of(context).pop(); // Cierra el Drawer
-              Navigator.pushNamed(context, '/quinta'); // Navega a Ejercicio 5
+              Navigator.of(context).pop();
+              Navigator.pushNamed(context, '/quinta');
             },
           ),
           ListTile(
             title: const Text("Ejercicio 6"),
             onTap: () {
-              Navigator.of(context).pop(); // Cierra el Drawer
-              Navigator.pushNamed(context, '/sexta'); // Navega a Ejercicio 6
+              Navigator.of(context).pop();
+              Navigator.pushNamed(context, '/sexta');
             },
           ),
           ListTile(
             title: const Text("Reto"),
             onTap: () {
-              Navigator.of(context).pop(); // Cierra el Drawer
-              Navigator.pushNamed(context, '/septima'); // Navega a Reto
+              Navigator.of(context).pop();
+              Navigator.pushNamed(context, '/septima');
             },
           ),
           ListTile(
             title: const Text("Instagram"),
             onTap: () {
-              Navigator.of(context).pop(); // Cierra el Drawer
-              Navigator.pushNamed(context, '/octava'); // Navega a Instagram
+              Navigator.of(context).pop();
+              Navigator.pushNamed(context, '/octava');
             },
           ),
           ListTile(
             title: const Text("Entrega 3"),
             onTap: () {
-              Navigator.of(context).pop(); // Cierra el Drawer
-              Navigator.pushNamed(context, '/novena'); // Navega a Entrega 3
+              Navigator.of(context).pop();
+              Navigator.pushNamed(context, '/novena');
             },
           ),
           ListTile(
             title: const Text("Siete y medio"),
             onTap: () {
-              Navigator.of(context).pop(); // Cierra el Drawer
-              Navigator.pushNamed(context, '/decima'); // Navega a Entrega 3
+              Navigator.of(context).pop();
+              Navigator.pushNamed(context, '/decima');
             },
           ),
           ListTile(
             title: const Text("Formulario"),
             onTap: () {
-              Navigator.of(context).pop(); // Cierra el Drawer
-              Navigator.pushNamed(context, '/undecima'); // Navega a Formulario
+              Navigator.of(context).pop();
+              Navigator.pushNamed(context, '/undecima');
             },
           ),
           ListTile(
             title: const Text("Adivina el número"),
             onTap: () {
-              Navigator.of(context).pop(); // Cierra el Drawer
-              Navigator.pushNamed(context, '/duodecima'); // Navega a Formulario
+              Navigator.of(context).pop();
+              Navigator.pushNamed(context, '/duodecima');
             },
           ),
           ListTile(
             title: const Text("Formulario 2 - No Dual"),
             onTap: () {
-              Navigator.of(context).pop(); // Cierra el Drawer
-              Navigator.pushNamed(context, '/tredecima'); // Navega a Formulario
+              Navigator.of(context).pop();
+              Navigator.pushNamed(context, '/tredecima');
             },
           ),
         ],

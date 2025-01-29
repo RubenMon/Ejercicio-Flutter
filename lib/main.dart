@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/rutas/rutas.dart';
-import 'Screens/menuLateral.dart';
+import 'package:flutter_application_1/Screens/MenuLateral.dart';
 
 void main() => runApp(const MyApp());
 
@@ -11,11 +11,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Ejemplo de Drawer (Rubén Montero Martín)',
-      debugShowCheckedModeBanner: false, // Desactiva el banner de depuración
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        // Define el color del scaffold
         scaffoldBackgroundColor: Colors.lightBlue.shade50,
-        // Personalización de la AppBar
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.blueAccent,
           titleTextStyle: TextStyle(
@@ -25,8 +23,6 @@ class MyApp extends StatelessWidget {
           ),
           iconTheme: IconThemeData(color: Colors.white),
         ),
-
-        // Define estilos globales de texto
         textTheme: const TextTheme(
           bodyMedium: TextStyle(
             fontSize: 16,
@@ -39,8 +35,8 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      initialRoute: '/', // Ruta inicial
-      routes: appRoutes, // Mapa de rutas definido en rutas.dart
+      initialRoute: '/',
+      routes: appRoutes,
     );
   }
 }
@@ -54,7 +50,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Actividad01 (Drawer)"),
       ),
-      drawer: const MenuLateral(), // Uso del menu lateral modular
+      drawer: const MenuLateral(),
       body: const Center(
         child: Text("https://github.com/RubenMon/Ejercicio-Flutter.git"),
       ),

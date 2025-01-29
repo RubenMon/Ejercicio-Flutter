@@ -5,6 +5,7 @@ class Formulario extends StatefulWidget {
   const Formulario({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _RegistrationFormState createState() => _RegistrationFormState();
 }
 
@@ -72,12 +73,12 @@ class _RegistrationFormState extends State<Formulario> {
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Por favor, ingresa tu nombre';
-                  } else if (!RegExp(r'^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$').hasMatch(value)) {
-                    return 'El nombre solo debe contener letras y espacios';
-                  } else if (value.length < 3) {
+                } else if (!RegExp(r'^[A-ZÁÉÍÓÚÑ][a-zA-ZáéíóúÁÉÍÓÚñÑ\s]*$').hasMatch(value)) {
+                    return 'El nombre debe empezar con mayúscula y solo puede contener letras, tildes, la letra ñ y espacios';
+                } else if (value.length < 3) {
                     return 'El nombre debe tener al menos 3 caracteres';
-                  }
-                  return null;
+                }
+                return null;
                 },
                 keyboardType: TextInputType.text,
                 textCapitalization: TextCapitalization.words,
@@ -102,7 +103,6 @@ class _RegistrationFormState extends State<Formulario> {
                 keyboardType: TextInputType.emailAddress,
               ),
               const SizedBox(height: 16.0),
-
               // Campo de Contraseña
               TextFormField(
                 controller: _passwordController,
