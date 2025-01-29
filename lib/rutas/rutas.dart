@@ -1,4 +1,4 @@
-import 'package:flutter_application_1/Screens/screens.dart';
+import 'package:flutter_application_1/screens/screens.dart';
 import 'package:flutter_application_1/main.dart';
 
 final Map<String, WidgetBuilder> appRoutes = {

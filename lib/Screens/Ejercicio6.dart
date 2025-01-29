@@ -37,7 +37,7 @@ class _ContadorPageState extends State<ContadorPage> {
       appBar: AppBar(
         title: const Text('Contador'),
       ),
-      drawer: const MenuLateral(), // Aquí se usa el Drawer con la clase MenuLateral
+      endDrawer: const MenuLateral(), // Aquí se usa el Drawer con la clase MenuLateral
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

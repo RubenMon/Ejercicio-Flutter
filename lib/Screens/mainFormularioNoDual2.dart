@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Screens/MenuLateral.dart';
-import 'package:flutter_application_1/Screens/leftForm.dart';
-import 'package:flutter_application_1/Screens/rightForm.dart';
+import 'package:flutter_application_1/screens/MenuLateral.dart';
+import 'package:flutter_application_1/screens/leftForm.dart';
+import 'package:flutter_application_1/screens/rightForm.dart';
 
 class FormularioSwitch extends StatefulWidget {
   const FormularioSwitch({super.key});
